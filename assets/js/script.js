@@ -47,8 +47,10 @@ $(function() {
     },
     render: function() {
       // Create the HTML
-      this.$el.html('<input type="checkbox" value="1" name="' + this.model.get('title') + this.$('input').prop('checked', this.model.get('checked')));
+      this.$el.html('<input type="checkbox" value="1" name="' + this.model.get('title') + '" /> ' + this.model.get('title') + '<span>$' + this.model.get('price') + '</span>');
+      this.$('input').prop('checked', this.model.get('checked'));
       // Returning the object is a good practice that makes chaining possible
+      console.log(this);
       return this;
     },
     toggleService: function() {
@@ -91,4 +93,6 @@ $(function() {
       return this;
     }
   });
+
+  new App();
 });
