@@ -13,4 +13,14 @@ $(function() {
       this.set('checked', !this.get('checked'));
     }
   });
+
+  // Create a collection of services
+  var ServiceList = Backbone.Collection.extend({
+    // Will hold objects of the Service model
+    model: Service,
+    // Return an array only with the checked services
+    getChecked: function() {
+      return this.where({ checked: true });
+    }
+  });
 });
