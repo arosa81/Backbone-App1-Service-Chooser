@@ -23,4 +23,14 @@ $(function() {
       return this.where({ checked: true });
     }
   });
+
+  // Prefill the collection with a number of services.
+  var services = new ServiceList([
+    new Service({ title: 'web development', price: 200 }),
+    new Service({ title: 'web design', price: 250 }),
+    new Service({ title: 'photoshop', price: 200 }),
+    new Service({ title: 'coffee drinking', price: 200 }),
+    new Service({ title: 'business analysis', price: 300 }),
+    new Service({ title: 'project management', price: 275 })
+  ]);
 });
